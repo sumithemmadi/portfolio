@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(248, 250, 252);
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: justify;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 2.25rem;
+}
+
+.site-name{
+    font-size: 30px;
+    margin: 20px;
+}
+
+.navbar-link a {
+    padding: 15px;
+    color:black;
+    font-size: larger;
+}
+
+/* introduction  */
+
+.intro {
+    text-align: center;
+}
+
+.profile_pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+.intro p {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.intro strong {
+    font-size: 65px;
+}
+
+.intro-text {
+    font-size: 22px;
+    padding: 5px;
+    
+}
+
+.contact-logos{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;   
+}
+
+.resume-btn {
+    padding: 10px 50px;
+    background-color: rgb(88, 228, 88);
+    border-radius: 25px;
+    font-size: 1.20rem;
+    font-weight: 700;
+    transition: 0.3s;
+    color: black;
+    box-shadow: 1px 0px 5px 2px rgb(212, 209, 209);
+}
+
+.resume-btn:hover {
+    background-color: green;
+    /* border: 2px solid; */
+    color: white;
+    cursor: pointer;
+}
