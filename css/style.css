@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 :root {
     --font-family: "Roboto", sans-serf;
     --normal-font: 400;
@@ -111,6 +113,7 @@ body {
 
 .small-bio {
     font-size: x-large;
+    font-family: var(--font-family);
 }
 
 .contact-logos {
@@ -140,7 +143,7 @@ body {
     height: 70px;
 }
 
-.about-btn {
+.contact-btn {
     padding: 10px 50px;
     background-color: var(--primary-color);
     border-radius: 25px;
@@ -152,7 +155,7 @@ body {
     text-decoration: none
 }
 
-.about-btn:hover {
+.contact-btn:hover {
     background-color: green;
     color: white;
     cursor: pointer;
