@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 :root {
+    --font-family: "Roboto", sans-serf;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
     --primary-color: rgb(88, 228, 88);
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s
 }
 
 html {
@@ -130,19 +142,18 @@ body {
 
 .about-btn {
     padding: 10px 50px;
-    background-color: rgb(88, 228, 88);
+    background-color: var(--primary-color);
     border-radius: 25px;
     font-size: 1.2rem;
     font-weight: 700;
     transition: 0.3s;
     color: black;
-    box-shadow: 1px 0px 5px 2px rgb(212, 209, 209);
+    box-shadow: 1px 0px 15px 2px rgb(212, 209, 209);
     text-decoration: none
 }
 
 .about-btn:hover {
     background-color: green;
-    /* border: 2px solid; */
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -166,6 +177,8 @@ body {
 .project-container1,
 .project-container2 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-img {
@@ -174,7 +187,6 @@ body {
 }
 
 .project-card-left {
-    /* background-color: gray; */
     width: 400px;
     margin-left: auto;
     margin-right: 5px;
@@ -205,4 +217,90 @@ body {
 .project-info img {
     /* margin-left: 25px; */
     height: 50px;
+}
+
+#contact {
+    display: inline-block;
+    margin: 0;
+    /* background-color: aquamarine; */
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.contactme-box {
+    display: flex;
+    width: 80%;
+    /* height: 400px; */
+    margin: auto;
+    /* background-color: azure; */
+    border-radius: 20px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.contact-form {
+    padding: 10px;
+    margin: 25px;
+}
+
+.contact-form label {
+    line-height: 2.7em;
+    font-weight: var(--bold-font);
+    color: black;
+    color: black;
+}
+
+.contact-form textarea {
+    font: 1em sans-serif;
+    min-height: 6.25rem;
+    font-size: 14px;
+    color: black;
+}
+
+.input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    border: none;
+    border: 1.6px solid black;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.input-field::placeholder {
+    /* padding: 0.5rem; */
+    color: black;
+    opacity: 50%;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 5px;
+    background-color: var(--primary-color);
+    border: 1.6px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: x-large;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: green;
+    border: 1.6px solid var(--primary-color);
+    color: white;
+    cursor: pointer;
 }
