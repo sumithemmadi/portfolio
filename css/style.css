@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
 :root {
     --font-family: "Roboto", sans-serf;
     --normal-font: 400;
@@ -162,6 +163,10 @@ body {
     text-decoration: none;
 }
 
+
+
+/* projects */
+
 #projects {
     display: inline-block;
     margin: 0;
@@ -184,8 +189,44 @@ body {
     align-items: center;
 }
 
+.terminal-container-left {
+    width: 450px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: 70px;
+    border-radius: 10px;
+}
+
+.terminal {
+    text-align: left;
+    justify-content: left;
+    display: inline-block;
+    width: 450px;
+    height: 300px;
+    margin: 15px 7px 5px 7px;
+    background-color: #30363d;
+    backdrop-filter: blur(27.1828px);
+    border-radius: 6px;
+    border: 1px solid rgb(80, 76, 76);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 0px 15px 2px rgb(100, 110, 112);
+}
+
+.terminal-text{
+    width: 440px;
+    height: 280px;
+    padding: 15px;
+    color: white;
+    overflow: hidden;
+    font-family: "SF Mono","Monaco","Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+
+}
+
+
 .project-img {
-    width: 350px;
+    width: 400px;
+    height: 300px;
     border-radius: 20px;
 }
 
@@ -221,6 +262,56 @@ body {
     /* margin-left: 25px; */
     height: 50px;
 }
+
+
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-container {
+    display: block;
+    width: 150px;
+    height: 170px;
+    margin: 25px;
+    border-radius: 16px;
+    box-shadow: 1px 0px 15px 2px rgb(212, 209, 209);
+}
+
+.skill-logo-container {
+    display: flex;
+    width: auto;
+    height: 140px;
+    margin: auto;
+    /* background-color: #a17a69; */
+    justify-content: center;
+    text-align: center;
+
+}
+
+.skill-logo-container img {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+
+.skill-name-container {
+    text-align: center;
+    justify-content: center;
+    font-family: var(--font-family)
+}
+
+
+
+
+
+
+
 
 #contact {
     display: inline-block;

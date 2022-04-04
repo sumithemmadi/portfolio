@@ -23,6 +23,163 @@
 </head>
 
 <body>
+    <script>
+        var i = 0;
+        var j = 0;
+        var k = 0;
+        var l = 0;
+
+        var a = 0;
+        var data = "";
+
+        var command1 = '~$ npm install -g  truecallerjs';
+        var command2 = '~$ truecallerjs -s  +919912345678 --name';
+        var command3 = '~$ truecallerjs -s  +919912345678 --text';
+
+        function cmd1Color(i) {
+            var green = [0];
+            var yellow = [3, 4, 5]
+            var blue = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+            var gray = [15, 16];
+
+            if (green.includes(i)) {
+                return "green";
+            } else if (yellow.includes(i)) {
+                return "yellow";
+            } else if (blue.includes(i)) {
+                return "rgb(18, 223, 238)";
+            } else if (gray.includes(i)) {
+                return "gray";
+            } else {
+                return "white";
+            }
+
+        }
+
+        function cmd2Color(j) {
+            var green = [0];
+            var yellow = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+            var blue = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+            var gray = [16, 17, 34, 35, 36, 37, 38, 39];
+
+            if (green.includes(j)) {
+                return "green";
+            } else if (yellow.includes(j)) {
+                return "yellow";
+            } else if (blue.includes(j)) {
+                return "rgb(18, 223, 238)";
+            } else if (gray.includes(j)) {
+                return "gray";
+            } else {
+                return "white";
+            }
+
+        }
+
+
+        function callTruecallerjs() {
+            if (i < command1.length) {
+                data += "<span style=\"color:" + cmd1Color(i) + ";\">" + command1.charAt(i) + "<span>";
+                document.getElementById("cmd1").innerHTML = data + '<span class="console-underscore" style="color: white">&#95;</span>'
+                i++;
+                setTimeout(callTruecallerjs, 80);
+            } else if (i == command1.length) {
+                data = "<span style=\"color: green;\">~</span><span style=\"color: white;\">$ </span><span style=\"color: yellow;\">npm</span><span style=\"color: white;\"> install </span><span style=\"color: gray;\"> -g </span><span style=\"color: rgb(18, 223, 238);\">truecallerjs</span><br>"
+                document.getElementById("cmd1").innerHTML = data
+                i++;
+                setTimeout(callTruecallerjs, 50);
+                // var j = 0;
+
+            } else if (j < 19) {
+                var npmLines = ['[#.................] / idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
+                    '[##................] \\ idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
+                    '[###...............] / idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
+                    '[####..............] \\ idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
+                    '[#####.............] / idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
+                    '[######............] \\ idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
+                    '[#######...........] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
+                    '[########..........] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
+                    '[#########.........] \\ idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
+                    '[##########........] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
+                    '[###########.......] \\ idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
+                    '[############......] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
+                    '[#############.....] \\ reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
+                    '[##############....] / reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
+                    '[###############...] \ reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
+                    '[################..] / reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
+                    '[#################.] \\ reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
+                    '[##################] / reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
+                    '<span style="color: white;"> changed 25 packages, and audited 26 packages in 5s</span><br><span style="color: white;"> 3 packages are looking for funding</span><br><span style="color: white;"> run `npm fund` for details </span><br><span style="color: white;"> found</span> <span style="color: green;">0</span> <span style="color: white;">vulnerabilities</span>'
+                ]
+                document.getElementById("cmd1").innerHTML = data + npmLines[j];
+                j++;
+                setTimeout(callTruecallerjs, 80);
+                return 0;
+            } else if (j == 19) {
+                data = '<span style="color: green;">~</span><span style="color: white;">$ </span><span style="color: yellow;">npm </span><span style="color: white;"> install </span><span style="color: gray;"> \-\g\ </span><span style="color: rgb(18, 223, 238);">  truecallerjs </span><br><span style="color: white;"> changed 25 packages, and audited 26 packages in 5s</span><br><span style="color: white;"> 3 packages are looking for funding</span><br><span style="color: white;"> run `npm fund` for details </span><br><span style="color: white;"> found</span> <span style="color: green;">0</span> <span style="color: white;">vulnerabilities</span><br>'
+                document.getElementById("cmd1").innerHTML = data;
+                j++;
+                setTimeout(callTruecallerjs, 80);
+            } else if (k < command2.length) {
+                data += "<span style=\"color:" + cmd2Color(k) + ";\">" + command2.charAt(k) + "<span>";
+                document.getElementById("cmd1").innerHTML = data + '<span class="console-underscore" style="color: white">&#95;</span>';
+                k++;
+                setTimeout(callTruecallerjs, 80);
+            } else if (k == command2.length) {
+                data = '<span style="color: green;">~</span>$ <span style="color: yellow;">npm </span> install <span style="color: gray;">-g </span><span style="color: rgb(18, 223, 238);"> truecallerjs </span><br>changed 25 packages, and audited 26 packages in 5s<br>3 packages are looking for funding<br> run `npm fund` for details<br>found <span style="color: green;">0</span> vulnerabilities<br><span style="color: green;">~</span>$ <span style="color: yellow;"> truecallerjs </span><span style="color: gray;">-s </span> <span style="color: rgb(18, 223, 238);">+919912345678 </span><span style="color: gray;"> --name </span><br><span style = "color: yellow;"> Name </span>: <span style="color: rgb(14, 236, 14);"> Sumith Emmadi</span><br>';
+                document.getElementById("cmd1").innerHTML = data;
+                k++;
+                setTimeout(callTruecallerjs, 800);
+            } else if (l < command3.length) {
+                data += "<span style=\"color:" + cmd2Color(l) + ";\">" + command3.charAt(l) + "<span>";
+                document.getElementById("cmd1").innerHTML = data + '<span class="console-underscore" style="color: white">&#95;</span>'
+                l++;
+                setTimeout(callTruecallerjs, 80);
+            } else if (l == command3.length) {
+                document.getElementById("cmd1").innerHTML = data + '<br>';
+                l++;
+                setTimeout(callTruecallerjs, 80);
+            } else {
+                document.getElementById("cmd1").innerHTML = data + '<table><tr><td style="color: yellow">data</td><td style="color: rgb(18, 223, 238);">:</td></tr><tr><td style="color: yellow">id</td><td style="color: rgb(18, 223, 238);">: jHpw2rckuniunZzGQ/dX0h</td></tr><tr><td style="color: yellow">name</td><td style="color: rgb(18, 223, 238);">: Sumith Emmadi</td></tr><tr><td style="color: yellow">score</td><td style="color: rgb(18, 223, 238);">: 0.35793555</td></tr><tr><td style="color: yellow">access</td><td style="color: rgb(18, 223, 238);">: PUBLIC</td></tr><tr><td style="color: yellow">enhanced</td><td style="color: rgb(18, 223, 238);">: true</td></tr><tr><td style="color: yellow">phones</td><td style="color: rgb(18, 223, 238);">:</td></tr><tr><td style="color: yellow">e164Format</td><td style="color: rgb(18, 223, 238);">: +919912345678</td></tr><tr><td style="color: yellow">numberType</td><td style="color: rgb(18, 223, 238);">: MOBILE</td></tr><tr><td style="color: yellow">nationalFormat</td><td style="color: rgb(18, 223, 238);">: 099123 45678</td></tr><tr><td style="color: yellow">dialingCode</td><td style="color: rgb(18, 223, 238);">: 91</td></tr><tr><td style="color: yellow">countryCode</td><td style="color: rgb(18, 223, 238);">: IN</td></tr><tr><td style="color: yellow">carrier</td><td style="color: rgb(18, 223, 238);">: Vodafone Idea</td></tr><tr><td style="color: yellow">type</td><td style="color: rgb(18, 223, 238);">: openPhone</td></tr><tr><td style="color: yellow">addresses</td><td style="color: rgb(18, 223, 238);">:</td></tr><tr><td style="color: yellow">city</td><td style="color: rgb(18, 223, 238);">: Andhra Pradesh</td></tr><tr><td style="color: yellow">countryCode</td><td style="color: rgb(18, 223, 238);">: IN</td></tr><tr><td style="color: yellow">sourceStats</td><td style="color: rgb(18, 223, 238);">: []</td></tr></table>';
+                l++;
+                setTimeout(callTruecallerjs, 80);
+            }
+        }
+
+        // json-to-plain-text
+
+
+        function isOnScreen(elem) {
+            // if the element doesn't exist, abort
+            if (elem.length == 0) {
+                return;
+            }
+            var $window = jQuery(window)
+            var viewport_top = $window.scrollTop()
+            var viewport_height = $window.height()
+            var viewport_bottom = viewport_top + viewport_height
+            var $elem = jQuery(elem)
+            var top = $elem.offset().top
+            var height = $elem.height()
+            var bottom = top + height
+
+            return (top >= viewport_top && top < viewport_bottom) ||
+                (bottom > viewport_top && bottom <= viewport_bottom) ||
+                (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+        }
+
+        jQuery(document).ready(function () {
+            window.addEventListener('scroll', function (e) {
+                if (isOnScreen(jQuery('.terminal'))) {
+                    if (a == 0) {
+                        a++;
+                        setTimeout(callTruecallerjs, 2000);
+                    }
+
+                };
+            });
+        });
+    </script>
     <div class="container">
         <div class="home">
             <div class="navbar">
@@ -39,14 +196,17 @@
                     <a class="navbar-about" href="#about">About</a>
                 </div>
             </div>
-            <img class="profile-pic" src="/images/profile-pic.png" /><br/>
+            <img class="profile-pic" src="/images/profile-pic.png" /><br />
 
-            <span class="heyMessage"> Hey, I'm</span><br/>
+            <span class="heyMessage"> Hey, I'm</span><br />
             <div class="myName">
-                <strong>Sumith Emmadi!</strong><br/>
+                <strong>Sumith Emmadi!</strong><br />
             </div>
-            <span class="small-bio">I'm web developer and undergraduate student at <a href="https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology,_Surat+"> Indian Institute of Information Technology, Surat.</a> </span><br>
-            <span class="small-bio">Ilike to build things with Deep Learning/Machine Learning, Docker, Python, JavaScript , PHP</span><br>
+            <span class="small-bio">I'm web developer and undergraduate student at <a
+                    href="https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology,_Surat+"> Indian
+                    Institute of Information Technology, Surat.</a> </span><br>
+            <span class="small-bio">Ilike to build things with Deep Learning/Machine Learning, Docker, Python,
+                JavaScript , PHP</span><br>
             <span class="small-bio">IDreaming up ideas and making them come true is where my passion lies.</span><br>
             <span class="small-bio">Check out my full projects list here.</span><br>
             <div class="contact-logos">
@@ -61,7 +221,8 @@
                 <a href="https://www.instagram.com/sumithemmadi/">
                     <img class="contact-logo instagram-logo" src="/images/Instagram-Logo.wine.svg" /></a>
                 <a href="https://t.me/sumithemmadi/">
-                    <img class="contact-logo telegram-logo" src="/images/Telegram_(software)-Logo.wine.svg" /></a><br /><br /><br />
+                    <img class="contact-logo telegram-logo"
+                        src="/images/Telegram_(software)-Logo.wine.svg" /></a><br /><br /><br />
             </div>
             <a class="contact-btn" href="#contact">Contact me</a>
         </div>
@@ -85,19 +246,30 @@
                 <hr>
             </div>
             <div class="project-container1">
-                <div class="project-card-left">
-                    <img class="project-img" style="height: 220px;" src="/images/truecaller-logo.jpg" />
+                <div class="terminal-container-left">
+                    <div class="terminal">
+                        <div class="terminal-text">
+                            <span id="cmd1" style="color:white">~$ </span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-info-right">
                     <h2>TRUECALLERJS</h3>
-                        <a href="https://www.npmjs.com/package/truecallerjs"><img src="https://img.shields.io/npm/v/truecallerjs.svg" alt="Version"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs/stargazers"><img src="https://img.shields.io/github/stars/sumithemmadi/truecallerjs" alt="Stars"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs"><img src="https://img.shields.io/npm/dt/truecallerjs.svg" alt="weekly Download"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/truecallerjs.svg" alt="License"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs"><img src="https://img.shields.io/npms-io/maintenance-score/truecallerjs" alt="Maintenance"></a>
+                        <a href="https://www.npmjs.com/package/truecallerjs"><img
+                                src="https://img.shields.io/npm/v/truecallerjs.svg" alt="Version"></a>
+                        <a href="https://github.com/sumithemmadi/truecallerjs/stargazers"><img
+                                src="https://img.shields.io/github/stars/sumithemmadi/truecallerjs" alt="Stars"></a>
+                        <a href="https://github.com/sumithemmadi/truecallerjs"><img
+                                src="https://img.shields.io/npm/dt/truecallerjs.svg" alt="weekly Download"></a>
+                        <a href="https://github.com/sumithemmadi/truecallerjs/blob/main/LICENSE"><img
+                                src="https://img.shields.io/npm/l/truecallerjs.svg" alt="License"></a>
+                        <a href="https://github.com/sumithemmadi/truecallerjs"><img
+                                src="https://img.shields.io/npms-io/maintenance-score/truecallerjs"
+                                alt="Maintenance"></a>
 
                         <p> A simple npm package to search phone number details.</p>
-                        <a href="https://github.com/sumithemmadi/truecallerjs" class="project-btn contact-btn">Go to project</a>
+                        <a href="https://github.com/sumithemmadi/truecallerjs" class="project-btn contact-btn">Go to
+                            project</a>
                 </div>
             </div>
             <div class="doted-line">
@@ -121,17 +293,108 @@
                 <div class="project-info-left">
                     <h2>JSON TO PLAIN TEXT</h3>
 
-                        <a href="https://www.npmjs.com/package/json-to-plain-text"><img src="https://img.shields.io/npm/v/json-to-plain-text.svg" alt="Version"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text/stargazers"><img src="https://img.shields.io/github/stars/sumithemmadi/json-to-plain-text" alt="Stars"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text"><img src="https://img.shields.io/npm/dt/json-to-plain-text.svg" alt="weekly Download"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/json-to-plain-text.svg" alt="License"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text"><img src="https://img.shields.io/npms-io/maintenance-score/json-to-plain-text" alt="Maintenance"></a>
+                        <a href="https://www.npmjs.com/package/json-to-plain-text"><img
+                                src="https://img.shields.io/npm/v/json-to-plain-text.svg" alt="Version"></a>
+                        <a href="https://github.com/sumithemmadi/json-to-plain-text/stargazers"><img
+                                src="https://img.shields.io/github/stars/sumithemmadi/json-to-plain-text"
+                                alt="Stars"></a>
+                        <a href="https://github.com/sumithemmadi/json-to-plain-text"><img
+                                src="https://img.shields.io/npm/dt/json-to-plain-text.svg" alt="weekly Download"></a>
+                        <a href="https://github.com/sumithemmadi/json-to-plain-text/blob/main/LICENSE"><img
+                                src="https://img.shields.io/npm/l/json-to-plain-text.svg" alt="License"></a>
+                        <a href="https://github.com/sumithemmadi/json-to-plain-text"><img
+                                src="https://img.shields.io/npms-io/maintenance-score/json-to-plain-text"
+                                alt="Maintenance"></a>
 
                         <p>A simple package to search phone number details.</p><br>
-                        <a href="https://www.npmjs.com/package/truecallerjs" class="project-btn contact-btn">Go to project</a>
+                        <a href="https://www.npmjs.com/package/truecallerjs" class="project-btn contact-btn">Go to
+                            project</a>
                 </div>
                 <div class="project-card-right">
-                    <img class="project-img" style="height: 220px;" src="/images/json-to-text.webp" />
+                    <div class="terminal-container-left">
+                        <div class="terminal">
+                            <div class="terminal-text">
+                                <span id="cmd2" style="color: white;font-family: monospace;">
+                                    <span style="color: green;">~</span>$
+                                    <span style="color: yellow;">npm </span> install
+                                    <span style="color: rgb(18, 223, 238);"> json-to-plain-text </span><br>
+                                    +json-to-plain-text@1.0.2
+                                    <br> changed 2 packages, and audited 1 packages in 5s<br>found
+
+                                    <span style="color: green;">0</span> vulnerabilities<br><br>
+                                    <span style="color: green;">~</span>$
+                                    <span style="color: yellow;"> node </span>
+                                    <span style="color: rgb(18, 223, 238);"> node.js </span>
+                                    <table>
+                                        <tr>
+                                            <td style="color: yellow">name</td>
+                                            <td style="color: rgb(18, 223, 238);">: Sumith Emmadi</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">score</td>
+                                            <td style="color: rgb(18, 223, 238);">: 0.35793555</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">access</td>
+                                            <td style="color: rgb(18, 223, 238);">: PUBLIC</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">enhanced</td>
+                                            <td style="color: rgb(18, 223, 238);">: true</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">phones</td>
+                                            <td style="color: rgb(18, 223, 238);">:</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">e164Format</td>
+                                            <td style="color: rgb(18, 223, 238);">: +919912345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">numberType</td>
+                                            <td style="color: rgb(18, 223, 238);">: MOBILE</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">nationalFormat</td>
+                                            <td style="color: rgb(18, 223, 238);">: 099123 45678</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">dialingCode</td>
+                                            <td style="color: rgb(18, 223, 238);">: 91</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">countryCode</td>
+                                            <td style="color: rgb(18, 223, 238);">: IN</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">carrier</td>
+                                            <td style="color: rgb(18, 223, 238);">: Vodafone Idea</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">type</td>
+                                            <td style="color: rgb(18, 223, 238);">: openPhone</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">addresses</td>
+                                            <td style="color: rgb(18, 223, 238);">:</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">city</td>
+                                            <td style="color: rgb(18, 223, 238);">: Andhra Pradesh</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">countryCode</td>
+                                            <td style="color: rgb(18, 223, 238);">: IN</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: yellow">sourceStats</td>
+                                            <td style="color: rgb(18, 223, 238);">: []</td>
+                                        </tr>
+                                    </table>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="doted-line">
@@ -157,32 +420,116 @@
                 </div>
                 <div class="project-info-right">
                     <h2>Tor Onion Service On Heroku</h3>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku"><img src="https://img.shields.io/badge/Version-1.0.3-blue" alt="Version"></a>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku/stargazers"><img src="https://img.shields.io/github/stars/sumithemmadi/Tor-Onion-Service-On-Heroku" alt="Stars"></a>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku/blob/main/LICENSE"><img src="https://img.shields.io/github/license/sumithemmadi/Tor-Onion-Service-On-Heroku" alt="License"></a>
+                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku"><img
+                                src="https://img.shields.io/badge/Version-1.0.3-blue" alt="Version"></a>
+                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku/stargazers"><img
+                                src="https://img.shields.io/github/stars/sumithemmadi/Tor-Onion-Service-On-Heroku"
+                                alt="Stars"></a>
+                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku/blob/main/LICENSE"><img
+                                src="https://img.shields.io/github/license/sumithemmadi/Tor-Onion-Service-On-Heroku"
+                                alt="License"></a>
 
                         <p>Host a website in dark web with heroku </p>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku" class="project-btn contact-btn">Go to project</a>
+                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku"
+                            class="project-btn contact-btn">Go to project</a>
                 </div>
             </div>
 
         </div>
+        <section class="skills">
+            <h1 style="color: rgb(30, 122, 7);font-size: 60px;text-align: center; margin: 15px;">My Skills</h1>
+            <div class="4skill-cards">
+                <div class="skills-container">
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/c-1.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>C language</strong>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/cpp.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>CPP</strong>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/PHP-logo.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>PHP</strong>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/Python-logo-notext.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>Python</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/HTML5_Logo.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>HTML</strong>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/css.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>CSS</strong>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/js_logo.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>JavaScript</strong>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill-logo-container">
+                            <img src="/images/icons/Bash_Logo.svg" />
+                        </div>
+                        <div class="skill-name-container">
+                            <strong>Bash</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <div id="contact">'
-            <h1 style="color: rgb(30, 122, 7);font-size: 60px;text-align: center; margin: 15px;">Get In Touch With Me</h1>
+            <h1 style="color: rgb(30, 122, 7);font-size: 60px;text-align: center; margin: 15px;">Get In Touch With Me
+            </h1>
             <div class="contactme-box">
                 <div class="contact-form">
                     <form action="https://formspree.io/f/xeqnlevd" method="POST">
                         <div class="form-control">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field" required />
+                            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name"
+                                class="input-field" required />
                         </div>
                         <div class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field" required />
+                            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email"
+                                class="input-field" required />
                         </div>
                         <div class="form-control">
                             <label for="message">Message</label>
-                            <textarea id="message" cols="40" rows="10" placeholder="Enter Your Message" name="message" class="input-field" required></textarea>
+                            <textarea id="message" cols="40" rows="10" placeholder="Enter Your Message" name="message"
+                                class="input-field" required></textarea>
                         </div>
                         <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
                     </form>
