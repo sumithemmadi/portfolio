@@ -32,11 +32,31 @@ body {
     height: 100%;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+ul {
+    list-style-type: none
+}
+
+
+a{
+    text-decoration: none;
+    color: #30363d;
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
+
     width: 1350px;
-    height: 100%;
 }
 
 .navbar {
@@ -60,7 +80,7 @@ body {
     padding: 15px;
     color: black;
     font-size: larger;
-    text-decoration: none;
+
 }
 
 .project-list {
@@ -71,7 +91,6 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 15px;
-    text-decoration: none;
 }
 
 .project-list a {
@@ -87,8 +106,8 @@ body {
 .home {
     display: inline-block;
     margin: 0;
-    min-height: 100%;
     width: 100%;
+    height: 100vh;
     /* background-color: grey; */
     text-align: center;
     align-items: center;
@@ -123,7 +142,7 @@ body {
     height: 80px;
     margin: auto;
     padding: auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .contact-logos a {
@@ -153,14 +172,13 @@ body {
     transition: 0.3s;
     color: black;
     box-shadow: 1px 0px 15px 2px rgb(212, 209, 209);
-    text-decoration: none
+
 }
 
 .contact-btn:hover {
     background-color: green;
     color: white;
     cursor: pointer;
-    text-decoration: none;
 }
 
 
@@ -213,13 +231,13 @@ body {
     box-shadow: 1px 0px 15px 2px rgb(100, 110, 112);
 }
 
-.terminal-text{
+.terminal-text {
     width: 440px;
     height: 280px;
     padding: 15px;
     color: white;
     overflow: hidden;
-    font-family: "SF Mono","Monaco","Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+    font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 
 }
 
@@ -267,6 +285,7 @@ body {
 
 /* Skills */
 
+
 .skills-container {
     display: flex;
     align-items: center;
@@ -308,39 +327,41 @@ body {
 
 
 
+/* contact */
 
-
-
-
-
-#contact {
-    display: inline-block;
-    margin: 0;
-    /* background-color: aquamarine; */
-    width: 100%;
-    text-align: center;
-    align-items: center;
-}
-
-.contactme-box {
-    display: flex;
-    width: 80%;
-    /* height: 400px; */
-    margin: auto;
-    /* background-color: azure; */
-    border-radius: 20px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
-}
-
-.contact-form {
+.contact-form-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+}
+
+.contact-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 6px;
     margin: 10px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.contact-seperator {
+    width: 1px;
+    height: 500px;
+    bottom: 1px solid gray;
+    background-color: gray;
+}
+
+.contact-my-details {
+    padding: 15px;
+    margin: 25px;
+}
+
+.myprofile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 .contact-form {
@@ -348,21 +369,23 @@ body {
     margin: 25px;
 }
 
-.contact-form label {
+.my-details {
+    margin-top: 5%;
+}
+
+.contact-form-container label {
     line-height: 2.7em;
     font-weight: var(--bold-font);
     color: black;
-    color: black;
 }
 
-.contact-form textarea {
+.contact-form-container textarea {
     font: 1em sans-serif;
     min-height: 6.25rem;
     font-size: 14px;
-    color: black;
 }
 
-.input-field {
+.contact-form-container .input-field {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -375,6 +398,38 @@ body {
     outline: none;
 }
 
+.follow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: rgb(197, 195, 195);
+    color: black;
+    border-radius: 5px;
+
+}
+
+.follow-btn:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+
+}
+
 .input-field::placeholder {
     /* padding: 0.5rem; */
     color: black;
@@ -383,18 +438,29 @@ body {
 
 .submit-btn {
     width: 100%;
-    padding: 5px;
-    background-color: var(--primary-color);
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
     border: 1.6px solid var(--primary-color);
     border-radius: 20px;
-    font-size: x-large;
+    font-size: 1rem;
     font-weight: var(--bold-font);
     transition: var(--transition);
 }
 
 .submit-btn:hover {
-    background-color: green;
+    background-color: var(--primary-color);
     border: 1.6px solid var(--primary-color);
     color: white;
     cursor: pointer;
 }
+
+footer {
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+    /* background: rgb(34, 193, 195);
+    background-image: linear-gradient(135deg, #FFF3B0 10%, #CA26FF 100%); */
+    background-color: var(--primary-color);
+}
+
