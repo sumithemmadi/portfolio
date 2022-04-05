@@ -23,6 +23,15 @@
 </head>
 
 <body>
+    <script>
+        const burger = document.querySelector("#burger-menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+
+        function contactme() {
+            window.location = "#contact"
+        }
+    </script>
     <header class="site-header site-width">
         <!-- Navbar -->
         <nav>
@@ -94,7 +103,7 @@
                         </a>
                     </div>
                 </div>
-                <button class="contactme-btn" onClick='window.location="#contact"'>CONTACT ME</button>
+                <button class="contactme-btn" onClick="contactme()">CONTACT ME</button>
             </div>
         </section>
         <!-- More about -->
