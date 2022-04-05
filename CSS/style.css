@@ -659,6 +659,10 @@ footer {
         width: 80px;
         cursor: pointer;
     }
+    .card:hover {
+        transform: scale(1);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
     
 }
 
@@ -666,6 +670,9 @@ footer {
 @media screen and (max-height:750px) {
     .home {
         height: auto;
+    }
+    .bio-text-extra{
+        display: none;
     }
 
 }
