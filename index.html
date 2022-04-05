@@ -1,522 +1,306 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-    <title>sumith emmadi</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="this is my portfolio" />
     <meta name="keyboards" content="sumithemmadi,sumith,emmadi,iiit,iiitsurat,warangal" />
     <meta name="theme-color" content="#000000" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/profile-pic.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/profile-pic.png" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/ruby.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/ruby.svg" />
+
+    <!-- Animate CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Sumith Emmadi | Developer </title>
 </head>
 
 <body>
-    <script>
-        var i = 0;
-        var j = 0;
-        var k = 0;
-        var l = 0;
-
-        var a = 0;
-        var data = "";
-
-        var command1 = '~$ npm install -g  truecallerjs';
-        var command2 = '~$ truecallerjs -s  +919912345678 --name';
-        var command3 = '~$ truecallerjs -s  +919912345678 --text';
-
-        function cmd1Color(i) {
-            var green = [0];
-            var yellow = [3, 4, 5]
-            var blue = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
-            var gray = [15, 16];
-
-            if (green.includes(i)) {
-                return "green";
-            } else if (yellow.includes(i)) {
-                return "yellow";
-            } else if (blue.includes(i)) {
-                return "rgb(18, 223, 238)";
-            } else if (gray.includes(i)) {
-                return "gray";
-            } else {
-                return "white";
-            }
-
-        }
-
-        function cmd2Color(j) {
-            var green = [0];
-            var yellow = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-            var blue = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
-            var gray = [16, 17, 34, 35, 36, 37, 38, 39];
-
-            if (green.includes(j)) {
-                return "green";
-            } else if (yellow.includes(j)) {
-                return "yellow";
-            } else if (blue.includes(j)) {
-                return "rgb(18, 223, 238)";
-            } else if (gray.includes(j)) {
-                return "gray";
-            } else {
-                return "white";
-            }
-
-        }
-
-
-        function callTruecallerjs() {
-            if (i < command1.length) {
-                data += "<span style=\"color:" + cmd1Color(i) + ";\">" + command1.charAt(i) + "<span>";
-                document.getElementById("cmd1").innerHTML = data + '<span class="console-underscore" style="color: white">&#95;</span>'
-                i++;
-                setTimeout(callTruecallerjs, 80);
-            } else if (i == command1.length) {
-                data = "<span style=\"color: green;\">~</span><span style=\"color: white;\">$ </span><span style=\"color: yellow;\">npm</span><span style=\"color: white;\"> install </span><span style=\"color: gray;\"> -g </span><span style=\"color: rgb(18, 223, 238);\">truecallerjs</span><br>"
-                document.getElementById("cmd1").innerHTML = data
-                i++;
-                setTimeout(callTruecallerjs, 50);
-                // var j = 0;
-
-            } else if (j < 19) {
-                var npmLines = ['[#.................] / idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
-                    '[##................] \\ idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
-                    '[###...............] / idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
-                    '[####..............] \\ idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
-                    '[#####.............] / idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
-                    '[######............] \\ idealTree:<span style="color: yellow;">npm</span>: <span style="background-color: white;color: black;">sill</span> <span style="color: magenta;">idealTree </span>buildDeps',
-                    '[#######...........] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
-                    '[########..........] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
-                    '[#########.........] \\ idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
-                    '[##########........] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
-                    '[###########.......] \\ idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
-                    '[############......] / idealTree:<span style="color: yellow;">yargs</span>: <span style="color: magenta;">timing idealTree:#root</span> Completed in 1678ms',
-                    '[#############.....] \\ reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
-                    '[##############....] / reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
-                    '[###############...] \ reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
-                    '[################..] / reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
-                    '[#################.] \\ reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
-                    '[##################] / reify:npm:<span style="color: green;"> timing reifyNode:node_modules/truecallerjs/node_modules/axios</span> Completed in 352ms',
-                    '<span style="color: white;"> changed 25 packages, and audited 26 packages in 5s</span><br><span style="color: white;"> 3 packages are looking for funding</span><br><span style="color: white;"> run `npm fund` for details </span><br><span style="color: white;"> found</span> <span style="color: green;">0</span> <span style="color: white;">vulnerabilities</span>'
-                ]
-                document.getElementById("cmd1").innerHTML = data + npmLines[j];
-                j++;
-                setTimeout(callTruecallerjs, 80);
-                return 0;
-            } else if (j == 19) {
-                data = '<span style="color: green;">~</span><span style="color: white;">$ </span><span style="color: yellow;">npm </span><span style="color: white;"> install </span><span style="color: gray;"> \-\g\ </span><span style="color: rgb(18, 223, 238);">  truecallerjs </span><br><span style="color: white;"> changed 25 packages, and audited 26 packages in 5s</span><br><span style="color: white;"> 3 packages are looking for funding</span><br><span style="color: white;"> run `npm fund` for details </span><br><span style="color: white;"> found</span> <span style="color: green;">0</span> <span style="color: white;">vulnerabilities</span><br>'
-                document.getElementById("cmd1").innerHTML = data;
-                j++;
-                setTimeout(callTruecallerjs, 80);
-            } else if (k < command2.length) {
-                data += "<span style=\"color:" + cmd2Color(k) + ";\">" + command2.charAt(k) + "<span>";
-                document.getElementById("cmd1").innerHTML = data + '<span class="console-underscore" style="color: white">&#95;</span>';
-                k++;
-                setTimeout(callTruecallerjs, 80);
-            } else if (k == command2.length) {
-                data = '<span style="color: green;">~</span>$ <span style="color: yellow;">npm </span> install <span style="color: gray;">-g </span><span style="color: rgb(18, 223, 238);"> truecallerjs </span><br>changed 25 packages, and audited 26 packages in 5s<br>3 packages are looking for funding<br> run `npm fund` for details<br>found <span style="color: green;">0</span> vulnerabilities<br><span style="color: green;">~</span>$ <span style="color: yellow;"> truecallerjs </span><span style="color: gray;">-s </span> <span style="color: rgb(18, 223, 238);">+919912345678 </span><span style="color: gray;"> --name </span><br><span style = "color: yellow;"> Name </span>: <span style="color: rgb(14, 236, 14);"> Sumith Emmadi</span><br>';
-                document.getElementById("cmd1").innerHTML = data;
-                k++;
-                setTimeout(callTruecallerjs, 800);
-            } else if (l < command3.length) {
-                data += "<span style=\"color:" + cmd2Color(l) + ";\">" + command3.charAt(l) + "<span>";
-                document.getElementById("cmd1").innerHTML = data + '<span class="console-underscore" style="color: white">&#95;</span>'
-                l++;
-                setTimeout(callTruecallerjs, 80);
-            } else if (l == command3.length) {
-                document.getElementById("cmd1").innerHTML = data + '<br>';
-                l++;
-                setTimeout(callTruecallerjs, 80);
-            } else {
-                document.getElementById("cmd1").innerHTML = data + '<table><tr><td style="color: yellow">data</td><td style="color: rgb(18, 223, 238);">:</td></tr><tr><td style="color: yellow">id</td><td style="color: rgb(18, 223, 238);">: jHpw2rckuniunZzGQ/dX0h</td></tr><tr><td style="color: yellow">name</td><td style="color: rgb(18, 223, 238);">: Sumith Emmadi</td></tr><tr><td style="color: yellow">score</td><td style="color: rgb(18, 223, 238);">: 0.35793555</td></tr><tr><td style="color: yellow">access</td><td style="color: rgb(18, 223, 238);">: PUBLIC</td></tr><tr><td style="color: yellow">enhanced</td><td style="color: rgb(18, 223, 238);">: true</td></tr><tr><td style="color: yellow">phones</td><td style="color: rgb(18, 223, 238);">:</td></tr><tr><td style="color: yellow">e164Format</td><td style="color: rgb(18, 223, 238);">: +919912345678</td></tr><tr><td style="color: yellow">numberType</td><td style="color: rgb(18, 223, 238);">: MOBILE</td></tr><tr><td style="color: yellow">nationalFormat</td><td style="color: rgb(18, 223, 238);">: 099123 45678</td></tr><tr><td style="color: yellow">dialingCode</td><td style="color: rgb(18, 223, 238);">: 91</td></tr><tr><td style="color: yellow">countryCode</td><td style="color: rgb(18, 223, 238);">: IN</td></tr><tr><td style="color: yellow">carrier</td><td style="color: rgb(18, 223, 238);">: Vodafone Idea</td></tr><tr><td style="color: yellow">type</td><td style="color: rgb(18, 223, 238);">: openPhone</td></tr><tr><td style="color: yellow">addresses</td><td style="color: rgb(18, 223, 238);">:</td></tr><tr><td style="color: yellow">city</td><td style="color: rgb(18, 223, 238);">: Andhra Pradesh</td></tr><tr><td style="color: yellow">countryCode</td><td style="color: rgb(18, 223, 238);">: IN</td></tr><tr><td style="color: yellow">sourceStats</td><td style="color: rgb(18, 223, 238);">: []</td></tr></table>';
-                l++;
-                setTimeout(callTruecallerjs, 80);
-            }
-        }
-
-        // json-to-plain-text
-
-
-        function isOnScreen(elem) {
-            // if the element doesn't exist, abort
-            if (elem.length == 0) {
-                return;
-            }
-            var $window = jQuery(window)
-            var viewport_top = $window.scrollTop()
-            var viewport_height = $window.height()
-            var viewport_bottom = viewport_top + viewport_height
-            var $elem = jQuery(elem)
-            var top = $elem.offset().top
-            var height = $elem.height()
-            var bottom = top + height
-
-            return (top >= viewport_top && top < viewport_bottom) ||
-                (bottom > viewport_top && bottom <= viewport_bottom) ||
-                (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
-        }
-
-        jQuery(document).ready(function () {
-            window.addEventListener('scroll', function (e) {
-                if (isOnScreen(jQuery('.terminal'))) {
-                    if (a == 0) {
-                        a++;
-                        setTimeout(callTruecallerjs, 2000);
-                    }
-
-                };
-            });
-        });
-    </script>
-    <div class="container">
-        <div class="home">
-            <div class="navbar">
-                <p class="site-name">SUMITH EMMADI</p>
-                <div class="navbar-link">
-                    <a class="navbar-home" href="#home">Home</a>
-                    <a class="navbar-projects" href="#projects">Projects</a>
-                    <div class="project-list">
-                        <a href="#">Truecallerjs</a>
-                        <a href="#">json to plain text</a>
-                        <a href="#">Tor Hidden Service On Heroku</a>
+    <header class="site-header site-width">
+        <!-- Navbar -->
+        <nav>
+            <h1>SUMITH EMMADI</h1>
+            <ul class="navigation">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+            </button>
+        </nav>
+    </header>
+    <div class="site-width">
+        <!-- home Section -->
+        <section class="home" id="about">
+            <div class="profic-pic-container">
+                <img src="assets/images/profile-pic.png" alt="sumith-image" loading="lazy" class="home-img" />
+            </div>
+            <div class="bio">
+                <span class="bio-hey">Hey, I'm</span><br>
+                <span class="bio-name"><strong>Sumith Emmadi</strong></span>
+                <p class="bio-text">
+                    Hey I'm sumith I'm web developer and undergraduate student at Indian Institute of Information
+                    Technology, Surat.
+                    I like to build things with Deep Learning/Machine Learning, Docker, Python, JavaScript , PHP
+                    Dreaming up ideas and making them come true is where my passion lies.
+                    Check out my full projects list here.
+                </p>
+                <div class="bio-social-account">
+                    <div class="social-account-btn">
+                        <a href="mailto:sumithemmadi244@gmail.com" target="_blank">
+                            <img src="/assets/images/Gmail-Logo.wine.svg" alt="Gmail-Logo" loading="lazy"
+                                class="Gmail-Logo" />
+                        </a>
                     </div>
-                    <a class="navbar-contact" href="#contact">Contact</a>
-                    <a class="navbar-about" href="#about">About</a>
+                    <div class="social-account-btn">
+                        <a href="https://in.linkedin.com/in/sumithemmadi" target="_blank">
+                            <img src="/assets/images/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn-Logo" loading="lazy"
+                                class="LinkedIn-Logo" />
+                        </a>
+                    </div>
+                    <div class="social-account-btn">
+                        <a href="https://github.com/sumithemmadi/" target="_blank">
+                            <img src="/assets/images/GitHub-Logo.wine.svg" alt="GitHub-Logo" loading="lazy"
+                                class="GitHub-Logo" />
+                        </a>
+                    </div>
+                    <div class="social-account-btn">
+                        <a href="https://www.facebook.com/sumithemmadi" target="_blank">
+                            <img src="/assets/images/Facebook-f_Logo-Blue-Logo.wine.svg" alt="Facebook-Logo"
+                                loading="lazy" class="Facebook-Logo" />
+                        </a>
+                    </div>
+                    <div class="social-account-btn">
+                        <a href="https://www.instagram.com/sumithemmadi/" target="_blank">
+                            <img src="/assets/images/Instagram-Logo.wine.svg" alt="Instagram-Logo" loading="lazy"
+                                class="Instagram-Logo" />
+                        </a>
+                    </div>
+                    <div class="social-account-btn">
+                        <a href="https://t.me/sumithemmadi/" target="_blank">
+                            <img src="/assets/images/Telegram_(software)-Logo.wine.svg" alt="Telegram_-Logo"
+                                loading="lazy" class="Telegram_-Logo" />
+                        </a>
+                    </div>
                 </div>
+                <button class="contactme-btn" onClick='window.location="#contact"'>CONTACT ME</button>
             </div>
-            <img class="profile-pic" src="/images/profile-pic.png" /><br />
+        </section>
+        <!-- More about -->
 
-            <span class="heyMessage"> Hey, I'm</span><br />
-            <div class="myName">
-                <strong>Sumith Emmadi!</strong><br />
-            </div>
-            <span class="small-bio">I'm web developer and undergraduate student at <a
-                    href="https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology,_Surat+"> Indian
-                    Institute of Information Technology, Surat.</a> </span><br>
-            <span class="small-bio">Ilike to build things with Deep Learning/Machine Learning, Docker, Python,
-                JavaScript , PHP</span><br>
-            <span class="small-bio">IDreaming up ideas and making them come true is where my passion lies.</span><br>
-            <span class="small-bio">Check out my full projects list here.</span><br>
-            <div class="contact-logos">
-                <a href="mailto:sumithemmadi244@gmail.com">
-                    <img class="contact-logo gmail-logo" src="/images/Gmail-Logo.wine.svg" /></a>
-                <a href="https://in.linkedin.com/in/sumithemmadi">
-                    <img class="contact-logo linkedin-logo" src="/images/LinkedIn-Icon-Logo.wine.svg" /></a>
-                <a href="https://github.com/sumithemmadi/">
-                    <img class="contact-logo github-logo" src="/images/GitHub-Logo.wine.svg" /></a>
-                <a href="https://www.facebook.com/sumithemmadi">
-                    <img class="contact-logo facebook-logo" src="/images/Facebook-f_Logo-Blue-Logo.wine.svg" /></a>
-                <a href="https://www.instagram.com/sumithemmadi/">
-                    <img class="contact-logo instagram-logo" src="/images/Instagram-Logo.wine.svg" /></a>
-                <a href="https://t.me/sumithemmadi/">
-                    <img class="contact-logo telegram-logo"
-                        src="/images/Telegram_(software)-Logo.wine.svg" /></a><br /><br /><br />
-            </div>
-            <a class="contact-btn" href="#contact">Contact me</a>
-        </div>
-        <div id="projects">
-            <h1 style="color: rgb(30, 122, 7);font-size: 60px;">PROJECTS</h1>
-            <div class="doted-line">
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-            </div>
-            <div class="project-container1">
-                <div class="terminal-container-left">
-                    <div class="terminal">
-                        <div class="terminal-text">
-                            <span id="cmd1" style="color:white">~$ </span>
+        <!-- Skills section -->
+        <section class="skills" id="skills">
+            <h1>My Skills</h1>
+            <div class="skill-cards4">
+                <div class="skills-container">
+                    <div class="skill-cards2">
+
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/c-1.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>C language</strong>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/cpp.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>CPP</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-cards2">
+
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/PHP-logo.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>PHP</strong>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/Python-logo-notext.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>Python</strong>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-info-right">
-                    <h2>TRUECALLERJS</h3>
-                        <a href="https://www.npmjs.com/package/truecallerjs"><img
-                                src="https://img.shields.io/npm/v/truecallerjs.svg" alt="Version"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs/stargazers"><img
-                                src="https://img.shields.io/github/stars/sumithemmadi/truecallerjs" alt="Stars"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs"><img
-                                src="https://img.shields.io/npm/dt/truecallerjs.svg" alt="weekly Download"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs/blob/main/LICENSE"><img
-                                src="https://img.shields.io/npm/l/truecallerjs.svg" alt="License"></a>
-                        <a href="https://github.com/sumithemmadi/truecallerjs"><img
-                                src="https://img.shields.io/npms-io/maintenance-score/truecallerjs"
-                                alt="Maintenance"></a>
-
-                        <p> A simple npm package to search phone number details.</p>
-                        <a href="https://github.com/sumithemmadi/truecallerjs" class="project-btn contact-btn">Go to
-                            project</a>
-                </div>
-            </div>
-            <div class="doted-line">
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-            </div>
-            <div class="project-container2">
-                <div class="project-info-left">
-                    <h2>JSON TO PLAIN TEXT</h3>
-
-                        <a href="https://www.npmjs.com/package/json-to-plain-text"><img
-                                src="https://img.shields.io/npm/v/json-to-plain-text.svg" alt="Version"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text/stargazers"><img
-                                src="https://img.shields.io/github/stars/sumithemmadi/json-to-plain-text"
-                                alt="Stars"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text"><img
-                                src="https://img.shields.io/npm/dt/json-to-plain-text.svg" alt="weekly Download"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text/blob/main/LICENSE"><img
-                                src="https://img.shields.io/npm/l/json-to-plain-text.svg" alt="License"></a>
-                        <a href="https://github.com/sumithemmadi/json-to-plain-text"><img
-                                src="https://img.shields.io/npms-io/maintenance-score/json-to-plain-text"
-                                alt="Maintenance"></a>
-
-                        <p>A simple package to search phone number details.</p><br>
-                        <a href="https://www.npmjs.com/package/truecallerjs" class="project-btn contact-btn">Go to
-                            project</a>
-                </div>
-                <div class="project-card-right">
-                    <div class="terminal-container-left">
-                        <div class="terminal">
-                            <div class="terminal-text">
-                                <span id="cmd2" style="color: white;font-family: monospace;">
-                                    <span style="color: green;">~</span>$
-                                    <span style="color: yellow;">npm </span> install
-                                    <span style="color: rgb(18, 223, 238);"> json-to-plain-text </span><br>
-                                    +json-to-plain-text@1.0.2
-                                    <br> changed 2 packages, and audited 1 packages in 5s<br>found
-
-                                    <span style="color: green;">0</span> vulnerabilities<br><br>
-                                    <span style="color: green;">~</span>$
-                                    <span style="color: yellow;"> node </span>
-                                    <span style="color: rgb(18, 223, 238);"> node.js </span>
-                                    <table>
-                                        <tr>
-                                            <td style="color: yellow">name</td>
-                                            <td style="color: rgb(18, 223, 238);">: Sumith Emmadi</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">score</td>
-                                            <td style="color: rgb(18, 223, 238);">: 0.35793555</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">access</td>
-                                            <td style="color: rgb(18, 223, 238);">: PUBLIC</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">enhanced</td>
-                                            <td style="color: rgb(18, 223, 238);">: true</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">phones</td>
-                                            <td style="color: rgb(18, 223, 238);">:</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">e164Format</td>
-                                            <td style="color: rgb(18, 223, 238);">: +919912345678</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">numberType</td>
-                                            <td style="color: rgb(18, 223, 238);">: MOBILE</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">nationalFormat</td>
-                                            <td style="color: rgb(18, 223, 238);">: 099123 45678</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">dialingCode</td>
-                                            <td style="color: rgb(18, 223, 238);">: 91</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">countryCode</td>
-                                            <td style="color: rgb(18, 223, 238);">: IN</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">carrier</td>
-                                            <td style="color: rgb(18, 223, 238);">: Vodafone Idea</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">type</td>
-                                            <td style="color: rgb(18, 223, 238);">: openPhone</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">addresses</td>
-                                            <td style="color: rgb(18, 223, 238);">:</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">city</td>
-                                            <td style="color: rgb(18, 223, 238);">: Andhra Pradesh</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">countryCode</td>
-                                            <td style="color: rgb(18, 223, 238);">: IN</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color: yellow">sourceStats</td>
-                                            <td style="color: rgb(18, 223, 238);">: []</td>
-                                        </tr>
-                                    </table>
-                                </span>
+                <div class="skills-container">
+                    <div class="skill-cards2">
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/HTML5_Logo.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>HTML</strong>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/css.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>CSS</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-cards2">
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/js_logo.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>JavaScript</strong>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            <div class="skill-logo-container">
+                                <img src="/assets/icons/Bash_Logo.svg">
+                            </div>
+                            <div class="skill-name-container">
+                                <strong>Bash</strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="doted-line">
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-            </div>
-            <div class="project-container1">
-                <div class="project-card-left">
-                    <img class="project-img" style="height: 220px;" src="/images/tor-1200.webp" />
-                </div>
-                <div class="project-info-right">
-                    <h2>Tor Onion Service On Heroku</h3>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku"><img
-                                src="https://img.shields.io/badge/Version-1.0.3-blue" alt="Version"></a>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku/stargazers"><img
-                                src="https://img.shields.io/github/stars/sumithemmadi/Tor-Onion-Service-On-Heroku"
-                                alt="Stars"></a>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku/blob/main/LICENSE"><img
-                                src="https://img.shields.io/github/license/sumithemmadi/Tor-Onion-Service-On-Heroku"
-                                alt="License"></a>
-
-                        <p>Host a website in dark web with heroku </p>
-                        <a href="https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku"
-                            class="project-btn contact-btn">Go to project</a>
-                </div>
-            </div>
-
-        </div>
-        <section class="skills">
-            <h1 style="color: rgb(30, 122, 7);font-size: 60px;text-align: center; margin: 15px;">My Skills</h1>
-            <div class="4skill-cards">
-                <div class="skills-container">
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/c-1.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>C language</strong>
-                        </div>
-                    </div>
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/cpp.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>CPP</strong>
-                        </div>
-                    </div>
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/PHP-logo.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>PHP</strong>
-                        </div>
-                    </div>
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/Python-logo-notext.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>Python</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-container">
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/HTML5_Logo.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>HTML</strong>
-                        </div>
-                    </div>
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/css.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>CSS</strong>
-                        </div>
-                    </div>
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/js_logo.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>JavaScript</strong>
-                        </div>
-                    </div>
-                    <div class="skill-container">
-                        <div class="skill-logo-container">
-                            <img src="/images/icons/Bash_Logo.svg" />
-                        </div>
-                        <div class="skill-name-container">
-                            <strong>Bash</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </section>
+        <!-- Projects section -->
+        <section class="projects-mobile" id="projects">
+            <h1>My Recent Projects</h1>
+            <div class="project-container">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/assets/icons/json-logo.jpg" alt="json-logo">
+                    </div>
+                    <div class="card-text">
+                        <span class="date" id="j2pt-updated-time">last published</span>
+                        <h2>JSON TO PLAIN TEXT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime
+                            quod
+                            deserunt eligendi dolor</p>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="value" id="j2pt-downoads">700</div>
+                            <div class="type">Downloads</div>
+                        </div>
+                        <div class="stat border">
+                            <div class="value" id="j2pt-stars">8</div>
+                            <div class="type">Stars</div>
+                        </div>
+                        <div class="stat">
+                            <div class="value" id="j2pt-forks">0</div>
+                            <div class="type">Forks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/assets/icons/truecaller-logo-vector.png" alt="truecaller-logo">
+
+                    </div>
+                    <div class="card-text">
+                        <span class="date" id="truecallerjs-updated-time"></span>
+                        <h2>TRUECALLER-JS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime
+                            quod
+                            deserunt eligendi dolor</p>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="value" id="truecallerjs-downloads">1400</div>
+                            <div class="type">Downloads</div>
+                        </div>
+                        <div class="stat border">
+                            <div class="value" id="truecallerjs-stars">23</div>
+                            <div class="type">Stars</div>
+                        </div>
+                        <div class="stat">
+                            <div class="value" id="truecallerjs-forks">4</div>
+                            <div class="type">Forks</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card-image">
+                        <img src="/assets/icons/json-logo.jpg" alt="json-logo">
+                    </div>
+                    <div class="card-text">
+                        <span class="date" id="j2pt-updated-time">last published</span>
+                        <h2>JSON TO PLAIN TEXT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime
+                            quod
+                            deserunt eligendi dolor</p>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="value" id="j2pt-downoads">700</div>
+                            <div class="type">Downloads</div>
+                        </div>
+                        <div class="stat border">
+                            <div class="value" id="j2pt-stars">8</div>
+                            <div class="type">Stars</div>
+                        </div>
+                        <div class="stat">
+                            <div class="value" id="j2pt-forks">0</div>
+                            <div class="type">Forks</div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/assets/images/tor-1200.webp" alt="tor-logo">
+                    </div>
+                    <div class="card-text">
+                        <span class="date" id="thsoh-updated-time"></span>
+                        <h2>TOR HIDDEN SERVICE ON HEROKU</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime
+                            quod
+                            deserunt eligendi dolor</p>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="value" id="thsoh-downloads">Unknown</div>
+                            <div class="type">Downloads</div>
+                        </div>
+                        <div class="stat border">
+                            <div class="value" id="thsoh-stars">20</div>
+                            <div class="type">Stars</div>
+                        </div>
+                        <div class="stat">
+                            <div class="value" id="thsoh-forks">7</div>
+                            <div class="type">Froks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
         <section class="contact" id="contact">
-            <h2 style="text-align: center; margin: 15px;">Get In Touch With Me</h2>
+            <h1 style="text-align: center; margin: 15px;">Get In Touch With Me</h1>
             <div class="contact-form-card">
                 <div class="contact-form-container">
                     <div class="contact-my-details">
-                        <img src="/images/profile-pic.png" class="myprofile-img" />
-                        <h1>Emmadi Sumith Kumar</h1>
+                        <img src="/assets/images/profile-pic.png" class="myprofile-img" />
+                        <h2>Emmadi Sumith Kumar</h2>
                         <!-- <h3>sumithemmadi</h3> -->
                         <div class="follow-btn">
                             <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsumithemmadi">Follow
@@ -535,7 +319,7 @@
                             <a href="https://github.com/sumithemmadi?tab=following">
                                 <span id="following"></span> following
                             </a><br>
-                            <a href="https://github.com/sumithemmadi?tab=stars">
+                            <a href="https://github.com/sumithemmadi?tab=repositories">
                                 <svg text="muted" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true">
                                     <path fill-rule="evenodd"
@@ -545,7 +329,7 @@
                                 <span id="total_stargazers_count"></span> stars earned
                             </a><br>
                             <a href="https://github.com/sumithemmadi?tab=repositories">
-                                <img style="width: 16px;" src="/images/icons/github-icon-1.svg" />
+                                <img style="width: 16px;" src="/assets/icons/github-icon-1.svg" />
                                 <span id="total-repos"></span> repositories
                             </a>
                             <div class="my-details">
@@ -561,7 +345,7 @@
                                         d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
                                     </path>
                                 </svg>
-                                <a href="sumithemmadi.github.io">sumithemmadi.github.io</a><br>
+                                <a href="https://sumithemmadi.me">sumithemmadi.me</a><br>
                                 <svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3"
                                     role="img" aria-labelledby="bhryjyngr2t6i4i4carlsogpjo30n8l">
                                     <title id="bhryjyngr2t6i4i4carlsogpjo30n8l">Twitter</title>
@@ -598,9 +382,11 @@
                 </div>
             </div>
         </section>
-        <script src="/asserts/js/github/githubUser.js"></script>
-        <script src="/asserts/js/github/stargazers.js"></script>
+        <!-- Social accounts - Fixed to the right -->
+
+        <!-- Scroll to top -->
     </div>
+    <!-- Footer section -->
     <footer>
         <p class="copy">&copy; Copyright 2021</p>
         <p class="copy">
@@ -608,6 +394,15 @@
             <a href="https://github.com/sumithemmadi" target="_blank">sumithemmadi</a>
         </p>
     </footer>
+
+    <!-- Website scripts -->
+    <script src="/assets/js/app.js"></script>
+    <script src="/js/github/githubUser.js"></script>
+    <script src="/js/github/githubCounter.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
