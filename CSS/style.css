@@ -153,31 +153,24 @@ nav ul li {
     font-size: 20px;
 }
 
+
 .bio-social-account {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* padding: 0.5rem ; */
-    width: 50%;
-    margin: 40px auto 40px auto;
-}
+    justify-content: center;
+    width: 60%;
+    margin: auto;
 
-.social-account-btn {
-    width: 120px;
-    height: 80px;
-    /* background-color: #8b8eaf; */
 }
-
-.social-account-btn img {
+    
+.bio-social-account img {
     width: 80px;
-    /* background-color: #0bd37f; */
 }
 
-.social-account-btn img:hover {
-    width: 90px;
-    cursor: pointer;
+.card:hover {
+    transform: scale(1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
-
 
 
 .contactme-btn {
@@ -520,6 +513,16 @@ footer {
 }
 
 @media screen and (max-width:1150px) {
+    .project-container {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        /* background: url("background.jpg"); */
+        overflow: hidden;
+    }
     .card {
         display: grid;
         grid-template-columns: 350px;
@@ -540,7 +543,7 @@ footer {
 }
 
 @media screen and (max-width:950px) {
-    .bio-social-account {
+    /* .bio-social-account {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -550,18 +553,17 @@ footer {
     
     .social-account-btn {
         width: auto;
-        /* background-color: #8b8eaf; */
+      
     }
     
     .social-account-btn img {
         width: 80px;
-        /* background-color: #0bd37f; */
     }
     
     .social-account-btn img:hover {
         width: 90px;
         cursor: pointer;
-    }
+    } */
     
 }
 
@@ -637,28 +639,13 @@ footer {
     }
     .bio-social-account {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: auto;
-        margin: 2px;
-        padding: 2px;
-        overflow: hidden;
+
+    }
+        
+    .bio-social-account img {
+        width: 80px;
     }
     
-    .social-account-btn {
-        width: 80px;
-        /* background-color: #8b8eaf; */
-    }
-    
-    .social-account-btn img {
-        width: 80px;
-        /* background-color: #0bd37f; */
-    }
-    
-    .social-account-btn img:hover {
-        width: 80px;
-        cursor: pointer;
-    }
     .card:hover {
         transform: scale(1);
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);

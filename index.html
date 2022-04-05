@@ -20,6 +20,7 @@
     <!-- Animate CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Sumith Emmadi | Developer </title>
+    <script src="/js/app.js"></script>
 </head>
 
 <body>
@@ -31,6 +32,37 @@
         function contactme() {
             window.location = "#contact"
         }
+
+        function isOnScreen(elem) {
+            // if the element doesn't exist, abort
+            if (elem.length == 0) {
+                return;
+            }
+            var $window = jQuery(window)
+            var viewport_top = $window.scrollTop()
+            var viewport_height = $window.height()
+            var viewport_bottom = viewport_top + viewport_height
+            var $elem = jQuery(elem)
+            var top = $elem.offset().top
+            var height = $elem.height()
+            var bottom = top + height
+
+            return (top >= viewport_top && top < viewport_bottom) ||
+                (bottom > viewport_top && bottom <= viewport_bottom) ||
+                (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+        }
+
+        jQuery(document).ready(function () {
+            window.addEventListener('scroll', function (e) {
+                if (isOnScreen(jQuery('.projectscontainer'))) {
+                    if (a == 0) {
+                        a++;
+                        setTimeout(callTruecallerjs, 2000);
+                    }
+
+                };
+            });
+        });
     </script>
     <header class="site-header site-width">
         <!-- Navbar -->
@@ -66,42 +98,34 @@
                     </span>
                 </p>
                 <div class="bio-social-account">
-                    <div class="social-account-btn">
-                        <a href="mailto:sumithemmadi244@gmail.com" target="_blank">
-                            <img src="/assets/images/Gmail-Logo.wine.svg" alt="Gmail-Logo" loading="lazy"
-                                class="Gmail-Logo" />
-                        </a>
-                    </div>
-                    <div class="social-account-btn">
-                        <a href="https://in.linkedin.com/in/sumithemmadi" target="_blank">
-                            <img src="/assets/images/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn-Logo" loading="lazy"
-                                class="LinkedIn-Logo" />
-                        </a>
-                    </div>
-                    <div class="social-account-btn">
-                        <a href="https://github.com/sumithemmadi/" target="_blank">
-                            <img src="/assets/images/GitHub-Logo.wine.svg" alt="GitHub-Logo" loading="lazy"
-                                class="GitHub-Logo" />
-                        </a>
-                    </div>
-                    <div class="social-account-btn">
-                        <a href="https://www.facebook.com/sumithemmadi" target="_blank">
-                            <img src="/assets/images/Facebook-f_Logo-Blue-Logo.wine.svg" alt="Facebook-Logo"
-                                loading="lazy" class="Facebook-Logo" />
-                        </a>
-                    </div>
-                    <div class="social-account-btn">
-                        <a href="https://www.instagram.com/sumithemmadi/" target="_blank">
-                            <img src="/assets/images/Instagram-Logo.wine.svg" alt="Instagram-Logo" loading="lazy"
-                                class="Instagram-Logo" />
-                        </a>
-                    </div>
-                    <div class="social-account-btn">
-                        <a href="https://t.me/sumithemmadi/" target="_blank">
-                            <img src="/assets/images/Telegram_(software)-Logo.wine.svg" alt="Telegram_-Logo"
-                                loading="lazy" class="Telegram_-Logo" />
-                        </a>
-                    </div>
+                    <a href="mailto:sumithemmadi244@gmail.com" target="_blank">
+                        <img src="/assets/images/Gmail-Logo.wine.svg" alt="Gmail-Logo" loading="lazy"
+                            class="Gmail-Logo" />
+                    </a>
+                    <a href="https://in.linkedin.com/in/sumithemmadi" target="_blank">
+                        <img src="/assets/images/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn-Logo" loading="lazy"
+                            class="LinkedIn-Logo" />
+                    </a>
+
+                    <a href="https://github.com/sumithemmadi/" target="_blank">
+                        <img src="/assets/images/GitHub-Logo.wine.svg" alt="GitHub-Logo" loading="lazy"
+                            class="GitHub-Logo" />
+                    </a>
+
+                    <a href="https://www.facebook.com/sumithemmadi" target="_blank">
+                        <img src="/assets/images/Facebook-f_Logo-Blue-Logo.wine.svg" alt="Facebook-Logo" loading="lazy"
+                            class="Facebook-Logo" />
+                    </a>
+
+                    <a href="https://www.instagram.com/sumithemmadi/" target="_blank">
+                        <img src="/assets/images/Instagram-Logo.wine.svg" alt="Instagram-Logo" loading="lazy"
+                            class="Instagram-Logo" />
+                    </a>
+
+                    <!-- <a href="https://t.me/sumithemmadi/" target="_blank">
+                        <img src="/assets/images/Telegram_(software)-Logo.wine.svg" alt="Telegram_-Logo" loading="lazy"
+                            class="Telegram_-Logo" />
+                    </a> -->
                 </div>
                 <button class="contactme-btn" onClick="contactme()">CONTACT ME</button>
             </div>
@@ -198,30 +222,6 @@
             <div class="project-container">
                 <div class="card">
                     <div class="card-image">
-                        <img src="/assets/icons/json-logo.jpg" alt="json-logo">
-                    </div>
-                    <div class="card-text">
-                        <span class="date" id="j2pt-updated-time">last published</span>
-                        <h2>JSON TO PLAIN TEXT</h2>
-                        <p>Convert any json to plain text</p>
-                    </div>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <div class="value" id="j2pt-downoads">700</div>
-                            <div class="type">Downloads</div>
-                        </div>
-                        <div class="stat border">
-                            <div class="value" id="j2pt-stars">8</div>
-                            <div class="type">Stars</div>
-                        </div>
-                        <div class="stat">
-                            <div class="value" id="j2pt-forks">0</div>
-                            <div class="type">Forks</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
                         <img src="/assets/icons/truecaller-logo-vector.png" alt="truecaller-logo">
 
                     </div>
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="card">
+                <div class="card">
                     <div class="card-image">
                         <img src="/assets/icons/json-logo.jpg" alt="json-logo">
                     </div>
@@ -268,7 +268,7 @@
                             <div class="type">Forks</div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="card">
                     <div class="card-image">
                         <img src="/assets/images/tor-1200.webp" alt="tor-logo">
