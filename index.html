@@ -33,6 +33,16 @@
             window.location = "#contact"
         }
 
+        function gotoProject(projectName) {
+            if (projectName == "truecallerjs") {
+                window.location.href = "https://www.npmjs.com/package/truecallerjs"
+            } else if (projectName == "j2pt") {
+                window.location.href = "https://www.npmjs.com/package/json-to-plain-text"
+            } else {
+                window.location.href = "https://github.com/sumithemmadi/Tor-Onion-Service-On-Heroku"
+            }
+        }
+
         function isOnScreen(elem) {
             // if the element doesn't exist, abort
             if (elem.length == 0) {
@@ -228,7 +238,8 @@
                     <div class="card-text">
                         <span class="date" id="truecallerjs-updated-time"></span>
                         <h2>TRUECALLER-JS</h2>
-                        <p>A simple package to search phone number details.</p>
+                        <p>A simple package to search phone number details.</p><br>
+                        <button class="gotoproject-btn" onClick='gotoProject("truecallerjs")' style="background-color:rgb(26, 146, 245);border: 1.6px solid rgb(26, 146, 245)">GO TO PROJECT</button>
                     </div>
                     <div class="card-stats">
                         <div class="stat">
@@ -250,16 +261,19 @@
                         <img src="/assets/icons/json-logo.jpg" alt="json-logo">
                     </div>
                     <div class="card-text">
-                        <span class="date" id="j2pt-updated-time"></span>
+                        <span class="date" id="j2pt-updated-time" style="color: rgb(255, 7, 110)"></span>
                         <h2>JSON TO PLAIN TEXT</h2>
                         <p>Convert any json to plain text</p>
+                        <button class="gotoproject-btn" onClick='gotoProject("j2pt")' style="background-color:rgb(255, 7, 110);border: 1.6px solid rgb(255, 7, 110)">GO TO PROJECT</button>
+
                     </div>
-                    <div class="card-stats">
+                    <div class="card-stats" style="color: rgb(255, 7, 110);background-color:rgb(255, 7, 110)">
                         <div class="stat">
                             <div class="value" id="j2pt-downoads">700</div>
                             <div class="type">Downloads</div>
                         </div>
-                        <div class="stat border">
+                        <div class="stat border"
+                            style="border-left: 1px solid rgb(172, 26, 87);border-right: 1px solid rgb(172, 26, 87);">
                             <div class="value" id="j2pt-stars"></div>
                             <div class="type">Stars</div>
                         </div>
@@ -274,16 +288,18 @@
                         <img src="/assets/images/tor-1200.webp" alt="tor-logo">
                     </div>
                     <div class="card-text">
-                        <span class="date" id="tosoh-updated-time"></span>
-                        <h2>TOR HIDDEN SERVICE ON HEROKU</h2>
-                        <p>A simple package to search phone number details.</p>
+                        <span class="date" id="tosoh-updated-time" style="color: rgb(144, 21, 245);"></span>
+                        <h2 style="font-size: 25px;">TOR ONION SERVICE ON HEROKU</h2>
+                        <p>Host Tor v3 Hidden Service in dark web using heroku</p>
+                        <button class="gotoproject-btn" onClick='gotoProject("tosoh")' style="background-color:rgb(144, 21, 245);border: 1.6px solid rgb(144, 21, 245);">GO TO PROJECT</button>
                     </div>
-                    <div class="card-stats">
+                    <div class="card-stats" style="color: rgb(144, 21, 245);background-color:rgb(144, 21, 245);">
                         <div class="stat">
                             <div class="value" id="tosoh-downloads">Unknown</div>
                             <div class="type">Downloads</div>
                         </div>
-                        <div class="stat border">
+                        <div class="stat border"
+                            style="border-left: 1px solid rgb(42, 1, 75);border-right: 1px solid rgb(42, 1, 75);">
                             <div class="value" id="tosoh-stars"></div>
                             <div class="type">Stars</div>
                         </div>

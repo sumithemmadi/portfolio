@@ -302,7 +302,7 @@ nav ul li {
 }
 
 .card-text .date {
-    color: rgb(255, 7, 110);
+    color: rgb(26, 146, 245);
     font-size: 13px;
 }
 
@@ -324,7 +324,8 @@ nav ul li {
     grid-template-rows: 1fr;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: rgb(255, 7, 110);
+    /* background: rgb(255, 7, 110); */
+    background: rgb(26, 146, 245);
 }
 
 .card-stats .stat {
@@ -337,8 +338,10 @@ nav ul li {
 }
 
 .card-stats .border {
-    border-left: 1px solid rgb(172, 26, 87);
-    border-right: 1px solid rgb(172, 26, 87);
+    /* border-left: 1px solid rgb(172, 26, 87);
+    border-right: 1px solid rgb(172, 26, 87); */
+    border-left: 1px solid rgb(2, 116, 247);
+    border-right: 1px solid rgb(2, 116, 247);
 }
 
 .card-stats .value {
@@ -361,7 +364,22 @@ nav ul li {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* contact */
+.gotoproject-btn {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+
+
+.j2pt-stats .date {
+    color: rgb(255, 7, 110);
+    font-size: 13px;
+}
 
 
 #contact h1 {
@@ -643,7 +661,7 @@ footer {
     }
         
     .bio-social-account img {
-        width: 80px;
+        width: 60px;
     }
     
     .card:hover {

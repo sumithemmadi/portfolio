@@ -1,4 +1,4 @@
-var XMLHttpRequest = require('xhr2')
+// var XMLHttpRequest = require('xhr2')
 var http = new XMLHttpRequest();
 let total_stars = 0;
 
@@ -53,22 +53,22 @@ http.onreadystatechange = function () {
             }
             if (data2[i].name == "Tor-Onion-Service-On-Heroku") {
                 var tosoh_stars = data2[i].stargazers_count;
-                var tosoh_forks = thsohdata2[i].forks;
+                var tosoh_forks = data2[i].forks;
                 var tosoh_update_time = fromNow(data2[i].updated_at);
             }
         }
 
         document.getElementById("truecallerjs-stars").innerHTML = truecallerjs_stars;
         document.getElementById("truecallerjs-forks").innerHTML = truecallerjs_forks;
-        document.getElementById("truecallerjs-updated-time").innerHTML = truecallerjs_update_time;
+        document.getElementById("truecallerjs-updated-time").innerHTML = "Updated " + truecallerjs_update_time;
 
         document.getElementById("j2pt-stars").innerHTML = j2pt_stars;
         document.getElementById("j2pt-forks").innerHTML = j2pt_forks;
-        document.getElementById("j2pt-updated-time").innerHTML = j2pt_update_time;
+        document.getElementById("j2pt-updated-time").innerHTML = "Updated " + j2pt_update_time;
 
         document.getElementById("tosoh-stars").innerHTML =  tosoh_stars ;
         document.getElementById("tosoh-forks").innerHTML = tosoh_forks;
-        document.getElementById("tosoh-updated-time").innerHTML = tosoh_update_time;
+        document.getElementById("tosoh-updated-time").innerHTML = "Updated " +  tosoh_update_time;
 
         document.getElementById("total_stargazers_count").innerHTML = total_stars;
 
