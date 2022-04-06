@@ -372,6 +372,7 @@ nav ul li {
     color: white;
     font-weight: var(--bold-font);
     transition: var(--transition);
+    cursor: pointer;
 }
 
 
