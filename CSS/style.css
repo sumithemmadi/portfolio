@@ -84,7 +84,7 @@ nav ul li {
 }
 
 .burger-menu {
-    color: var(--primary-color);
+    color: black;
     font-size: 2rem;
     border: 0;
     background-color: transparent;
@@ -465,13 +465,13 @@ nav ul li {
     justify-content: center;
     /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
-    padding: 2.5px;
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 5px;
-    background-color: rgb(197, 195, 195);
+    background-color: rgb(179, 179, 179);
     color: black;
-    border-radius: 5px;
+    border-radius: 3px;
+    box-shadow: 0 0 transparent ;
 
 }
 
@@ -481,13 +481,12 @@ nav ul li {
     justify-content: center;
     /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
-    padding: 2.5px;
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 5px;
     background-color: gray;
     color: black;
-    border-radius: 5px;
+
 
 }
 
